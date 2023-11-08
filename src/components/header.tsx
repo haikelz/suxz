@@ -58,14 +58,14 @@ export default function Header() {
           <button
             type="button"
             aria-label="login"
-            class="text-primary font-semibold"
+            class="text-primary text-xl font-semibold"
           >
             Log in
           </button>
           <button
             type="button"
             aria-label="Sign Up"
-            class="bg-primary text-white font-semibold rounded-lg py-2.5 px-8"
+            class="bg-primary text-xl text-white font-semibold rounded-lg py-2.5 px-8"
           >
             Sign up
           </button>
