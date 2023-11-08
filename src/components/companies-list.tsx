@@ -1,3 +1,4 @@
+import { tw } from "../lib/helpers";
 import Template from "./ui/template";
 
 const companiesList: Array<{ id: number; image: string }> = [
@@ -48,9 +49,17 @@ export default function CompaniesList() {
             World
           </p>
         </div>
-        <div class="grid grid-cols-1 grid-rows-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-10 lg:grid-rows-2 mt-20">
+        <div
+          class={tw(
+            "grid grid-cols-1 grid-rows-1 md:grid-cols-2 lg:grid-cols-4",
+            "gap-16 lg:gap-10 lg:grid-rows-2 mt-20"
+          )}
+        >
           {companiesList.map((item) => (
-            <img src={`/images/${item.image}`} />
+            <img
+              src={`/images/${item.image}`}
+              alt={`${item.image.replace(/.svg/, "")} logo`}
+            />
           ))}
         </div>
       </div>

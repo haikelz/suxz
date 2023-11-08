@@ -1,9 +1,15 @@
+import { tw } from "../lib/helpers";
 import Template from "./ui/template";
 
 export default function Banner() {
   return (
     <Template>
-      <div class="flex flex-col-reverse pt-28 pb-20 lg:pt-40 lg:pb-0 lg:flex-row items-start lg:justify-between">
+      <div
+        class={tw(
+          "flex flex-col-reverse pt-28 pb-20",
+          "lg:pt-40 lg:pb-0 lg:flex-row items-start lg:justify-between"
+        )}
+      >
         <div class="w-full mt-8">
           <p class="text-xl text-primary font-bold">SUXZ MAKE IT EASY</p>
           <h1 class="lg:text-[64px] text-[44px] w-full lg:w-[434px] font-extrabold leading-snug">

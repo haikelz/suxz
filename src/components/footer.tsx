@@ -1,3 +1,5 @@
+import { tw } from "../lib/helpers";
+
 export default function Footer() {
   return (
     <footer class="w-full flex justify-center items-center py-14 px-4">
@@ -12,7 +14,12 @@ export default function Footer() {
             eiusmod tempor incididunt ut labore et dolore.
           </p>
         </div>
-        <div class="flex mt-10 lg:mt-0 flex-col lg:flex-row items-start space-y-10 lg:space-y-0 lg:space-x-14">
+        <div
+          class={tw(
+            "flex mt-10 lg:mt-0 flex-col lg:flex-row",
+            "items-start space-y-10 lg:space-y-0 lg:space-x-14"
+          )}
+        >
           <div>
             <h4 class="font-bold text-[28px]">Company</h4>
             <ul class="space-y-3 mt-4">

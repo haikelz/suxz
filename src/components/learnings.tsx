@@ -46,7 +46,12 @@ export default function Learnings() {
             limit.
           </p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 xl:gap-16 xl:grid-cols-4 xl:grid-rows-1 mt-14 w-full">
+        <div
+          class={tw(
+            "grid grid-cols-1 sm:grid-cols-2 gap-10",
+            "xl:gap-16 xl:grid-cols-4 xl:grid-rows-1 mt-14 w-full"
+          )}
+        >
           {curriculum.map((item) => (
             <div
               class={tw(
@@ -55,7 +60,6 @@ export default function Learnings() {
               )}
               tabIndex={0}
               role="button"
-              aria-role="button"
               onClick={() => setChoice(item.id)}
             >
               <img src={`/images/${item.image}`} alt="starter" />

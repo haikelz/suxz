@@ -6,18 +6,13 @@ type TemplateProps = {
   children: JSXElement;
 };
 
-export default function Template({
-  className,
-  children,
-  ...props
-}: TemplateProps) {
+export default function Template({ className, children }: TemplateProps) {
   return (
     <section
       class={tw(
         "w-full max-w-full flex items-center justify-center",
         className
       )}
-      {...props}
     >
       <div class="max-w-7xl px-4 w-full">{children}</div>
     </section>

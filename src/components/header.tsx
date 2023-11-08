@@ -1,10 +1,16 @@
 import { createSignal } from "solid-js";
+import { tw } from "../lib/helpers";
 
 export default function Header() {
   const [isOpen, setIsOpen] = createSignal<boolean>(false);
 
   return (
-    <header class="w-full fixed top-0 bg-white/70 backdrop-blur-md z-50 max-w-full flex flex-col justify-center items-center">
+    <header
+      class={tw(
+        "w-full fixed top-0 bg-white/70 backdrop-blur-md z-50 max-w-full",
+        "flex flex-col justify-center items-center"
+      )}
+    >
       <nav class="w-full flex justify-between items-center p-4 max-w-7xl">
         <div class="flex items-center">
           <a href="#">

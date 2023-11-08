@@ -2,7 +2,12 @@ import { tw } from "../lib/helpers";
 
 export default function GetStarted() {
   return (
-    <div class="w-full flex justify-center lg:p-4 items-center text-center p-6 bg-workplace bg-black/55 bg-blend-multiply bg-center bg-cover lg:h-[382px]">
+    <section
+      class={tw(
+        "w-full flex justify-center lg:p-4 items-center text-center p-6 bg-workplace",
+        "bg-black/55 bg-blend-multiply bg-center bg-cover lg:h-[382px]"
+      )}
+    >
       <div>
         <h2 class="font-extrabold text-white text-[44px]">
           So? What Are You Waiting For
@@ -33,6 +38,6 @@ export default function GetStarted() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

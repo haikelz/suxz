@@ -61,48 +61,34 @@ export default function Testimonial() {
           )}
         >
           {testimonialList.map((item) => (
-            <>
-              {/*<div
-                class={tw(
-                  "relative w-full min-w-full max-w-[240px] flex flex-col justify-center items-center",
-                  choice() === item.id ? "bg-primary text-white" : ""
-                )}
-                tabIndex={1}
-                aria-role="button"
-                role="button"
-                onClick={() => setChoice(item.id)}
-                >*/}
-              <div
-                class={tw(
-                  "border-2 border-primary min-w-[240px] w-full max-w-full px-4 rounded-md relative transition-all",
-                  "flex flex-col items-center justify-center",
-                  choice() === item.id ? "bg-primary text-white" : ""
-                )}
-                tabIndex={1}
-                aria-role="button"
-                role="button"
-                onClick={() => setChoice(item.id)}
-              >
-                <img
-                  src={`/images/${item.image}`}
-                  alt="jason"
-                  class="overflow-clip bg-clip-border absolute -top-10"
-                />
-                <div class="py-10">
-                  <h4 class="font-bold text-[22px]">{item.name}</h4>
-                  <p
-                    class={tw(
-                      "font-normal text-[#BAB8D2] text-[15px]",
-                      choice() === item.id ? "text-white" : ""
-                    )}
-                  >
-                    {item.role}
-                  </p>
-                  <p class="font-normal text-[17px] mt-8">{item.description}</p>
-                </div>
+            <div
+              class={tw(
+                "border-2 border-primary min-w-[240px] w-full max-w-full px-4 rounded-md relative transition-all",
+                "flex flex-col items-center justify-center",
+                choice() === item.id ? "bg-primary text-white" : ""
+              )}
+              tabIndex={1}
+              role="button"
+              onClick={() => setChoice(item.id)}
+            >
+              <img
+                src={`/images/${item.image}`}
+                alt="jason"
+                class="overflow-clip bg-clip-border absolute -top-10"
+              />
+              <div class="py-10">
+                <h4 class="font-bold text-[22px]">{item.name}</h4>
+                <p
+                  class={tw(
+                    "font-normal text-[#BAB8D2] text-[15px]",
+                    choice() === item.id ? "text-white" : ""
+                  )}
+                >
+                  {item.role}
+                </p>
+                <p class="font-normal text-[17px] mt-8">{item.description}</p>
               </div>
-              {/*</div>*/}
-            </>
+            </div>
           ))}
         </div>
       </div>
